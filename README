@@ -1,0 +1,39 @@
+ctrl W - run cell
+ctrl E - run selection 
+
+
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+w",
+        "command": "jupyter.runcurrentcelladvance",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.runcurrentcelladvance",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && isWorkspaceTrusted && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+    },
+    {
+        "key": "ctrl+cmd+e",
+        "command": "cursorLineEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-cursorLineEnd",
+        "when": "textInputFocus"
+    }
+]
+
+
